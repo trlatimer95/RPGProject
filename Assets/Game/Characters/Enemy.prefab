@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 5
   suspicionTime: 5
-  waypointDwellTime: 3
   patrolPath: {fileID: 0}
   waypointTolerance: 1
+  waypointDwellTime: 3
+  patrolSpeedFraction: 0.2
 --- !u!1001 &11130764376399727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 1447211174581897749, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Enemy (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6108668036856402742, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
@@ -111,37 +112,37 @@ PrefabInstance:
     - target: {fileID: 7648681488953049805, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -60.89555
       objectReference: {fileID: 0}
     - target: {fileID: 7648681488953049805, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -20.001831
       objectReference: {fileID: 0}
     - target: {fileID: 7648681488953049805, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -21.168457
       objectReference: {fileID: 0}
     - target: {fileID: 7648681488953049805, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7648681488953049805, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.98803306
       objectReference: {fileID: 0}
     - target: {fileID: 7648681488953049805, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7648681488953049805, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.15424237
       objectReference: {fileID: 0}
     - target: {fileID: 7648681488953049805, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
@@ -156,7 +157,7 @@ PrefabInstance:
     - target: {fileID: 7648681488953049805, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 162.25401
       objectReference: {fileID: 0}
     - target: {fileID: 7648681488953049805, guid: 9d0a760e6bbcdf9468380a43375f4868,
         type: 3}
