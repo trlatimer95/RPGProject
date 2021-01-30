@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPG.Control;
+using System;
 using System.Collections;
 using UnityEditorInternal;
 using UnityEngine;
@@ -40,15 +41,22 @@ namespace RPG.SceneManagement
             DontDestroyOnLoad(gameObject);
 
             Fader fader = FindObjectOfType<Fader>();
-            
-            yield return fader.FadeOut(fadeOutTime);
-
             SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
-            wrapper.Save();
+            PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            playerController.enabled = false;
 
+            yield return fader.FadeOut(fadeOutTime);
+            
+            wrapper.Save();
+            Debug.Log("Game saved");
+            Debug.Log("Loading scene " + sceneToLoad);
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
+            Debug.Log("Scene " + sceneToLoad + " loaded");
+            PlayerController newPlayerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            newPlayerController.enabled = false;
 
             wrapper.Load();
+            Debug.Log("Wrapper loaded");
 
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
@@ -56,8 +64,10 @@ namespace RPG.SceneManagement
             wrapper.Save();
 
             yield return new WaitForSeconds(fadeWaitTime);
-            yield return fader.FadeIn(fadeInTime);
+            fader.FadeIn(fadeInTime);
 
+            newPlayerController.enabled = true;
+            Debug.Log("Ready to play");
             Destroy(gameObject);
         }
 
