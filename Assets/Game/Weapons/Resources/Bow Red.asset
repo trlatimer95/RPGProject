@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ffe9179733f8d4a86e69e2165246d5, type: 3}
   m_Name: Bow Red
   m_EditorClassIdentifier: 
+  itemID: 0f4ccb10-523b-484d-a9cd-f8d97b79428d
+  displayName: Bow
+  description: 
+  icon: {fileID: 21300000, guid: f8078c2bb5ee88d4a9472f76e501e0f3, type: 3}
+  pickup: {fileID: 3204201626586240013, guid: 755314739cef8614e80921ba1dcb42a2, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
   animatorOverride: {fileID: 22100000, guid: 4fb446b1cd76db6488bd52ab245b6e9e, type: 2}
   equippedPrefab: {fileID: 4003300155717889462, guid: 5a97099d38e1a8b4cb4cc06723bb4cc3,
     type: 3}
